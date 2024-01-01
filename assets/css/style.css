@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: url('../img/bg.jpeg') center center/cover;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #202253;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #343781;
+    cursor: pointer;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: url('../img/bg.jpeg') center center/cover;
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    color: #fff;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0000008e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: 0.6s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+    height: auto;
+}
+
+.media-container {
+    height: 250px;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-container .media {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: #0058cf 4px 4px 10px 0px;
+}
+
+.text-container {
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+.text-container p {
+    color: #d5d5d5;
+}
+
+.date-container {
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.date-container h3 {
+    color: #ddd;
+}
+
+.date-container h3 span {
+    color: #fff;
+}
+
+.date-container button {
+    background: #fff;
+    color: #202253;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#changeDateVal {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.media-loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+    position: absolute;
+}
+
+.media-loader.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
